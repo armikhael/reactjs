@@ -1,6 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-import NavBar from '../../components/NavBar/NavBar'
 import BadgeList from '../../components/BadgeList/BadgeList'
 
 import confLogo from '../../images/badge-header.svg'
@@ -45,8 +45,7 @@ class Badge extends React.Component {
 
   render() {
     return (
-      <div>
-        <NavBar />
+      <React.Fragment>
         <div className="Badge">
           <div className="Badges__hero">
             <div className="Badges__container">
@@ -56,17 +55,17 @@ class Badge extends React.Component {
         </div>
         <div className="Badges__container">
           <div className="Badges__buttons">
-            <a className="btn btn-primary" href="/badges/new">
+            <Link className="btn btn-primary" to="/badge/new">
               New Badge
-            </a>
+            </Link>
           </div>
-          <div class="Badges__list">
-            <div class="Badges__container">
+          <div className="Badges__list">
+            <div className="Badges__container">
               <BadgeList badgeList={this.state.data} />
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }
