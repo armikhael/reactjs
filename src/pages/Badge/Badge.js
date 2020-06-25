@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import BadgeList from '../../components/BadgeList/BadgeList'
+import BadgeHero from '../../components/BadgeHero/BadgeHero'
 
-import confLogo from '../../images/badge-header.svg'
 import './Badge.css'
 
 class Badge extends React.Component {
@@ -79,13 +79,7 @@ class Badge extends React.Component {
     console.log("2. render");
     return (
       <React.Fragment>
-        <div className="">
-          <div className="Badges__hero">
-            <div className="Badges__container">
-              <img className="Badges_conf-logo" src={confLogo} alt="Conf Logo" />
-            </div>
-          </div>
-        </div>
+        <BadgeHero />
         <div className="Badges__container">
           <div className="Badges__buttons">
             <Link className="btn btn-primary" to="/badge/new">
