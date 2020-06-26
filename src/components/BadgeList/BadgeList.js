@@ -18,15 +18,15 @@ class BadgeList extends React.Component {
       <ul className="list-unstyled">
         {this.props.badgeList.map((item) => {
           return (
-            <Link
-              className="text-reset text-decoration-none"
-              to={`/badge/${item.id}/edit`}>
-              <li key={item.id}>
+            <li key={item.id}>
+              <Link
+                className="text-reset text-decoration-none"
+                to={`/badge/${item.id}`}>
                 <Gravatar email={item.email} />
                 <p>{item.firstName} {item.lastName}</p>
-                <a>@ {item.twitter}</a>
-              </li>
-            </Link>
+                <p>@ {item.twitter}</p>
+              </Link>
+            </li>
           )
         })}
       </ul>
