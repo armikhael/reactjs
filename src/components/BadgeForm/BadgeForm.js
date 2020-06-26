@@ -2,15 +2,10 @@ import React from 'react'
 
 class BadgeForm extends React.Component {
 
-  handleSubmit = item => {
-
-  };
-
   render() {
     return (
       <div>
-        <h1>New Attendant</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="from-group">
             <label>First Name</label>
             <input
@@ -61,8 +56,9 @@ class BadgeForm extends React.Component {
               value={this.props.formValues.twitter}>
             </input>
           </div>
-          <button onClick={this.handleSubmit} type="button" className="btn btn-primary">Save</button>
+          <button className="btn btn-primary">Save</button>
         </form>
+        {this.props.error && <p className="text-danger">Hay un error</p>}
       </div>
     )
   }
