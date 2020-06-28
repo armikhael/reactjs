@@ -78,6 +78,7 @@ class BadgeDetail extends React.Component {
 						</div>
 						<div className='col-6'>
 							<h2>Acciones</h2>
+							<button className='btn btn-primary'>Increase Count</button>
 							<Link
 								to={`/badge/${this.props.match.params.badgeId}/edit`}
 								className='btn btn-primary'>
